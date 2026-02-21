@@ -1,0 +1,264 @@
+/* ===================================
+   もしもしコール LP用スタイル
+   提案①：生成り＋やわらかグリーン
+=================================== */
+
+/* ===== リセット・基本設定 ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+  background: #eef5f2;
+  color: #333333;
+  line-height: 2;
+  font-size: clamp(16px, 1.2vw, 18px);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== 共通レイアウト ===== */
+
+header,
+footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px 0px;
+}
+
+/* ===== タイトルエリア ===== */
+
+header {
+  text-align: center;
+  padding-top: 110px;
+  padding-bottom: 70px;
+}
+
+header h1 {
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-size: clamp(26px, 4vw, 34px);
+}
+
+header h2 {
+  margin: 0;
+  font-weight: 400;
+  color: #6fa89d;
+  font-size: clamp(16px, 2vw, 18px);
+}
+
+/* ===================================
+   ヒーローセクション
+=================================== */
+
+.hero {
+  background: transparent;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 130px 20px 110px;
+}
+
+.hero h1 {
+  margin-bottom: 14px;
+}
+
+.hero h2 {
+  margin-bottom: 40px;
+}
+
+.hero-copy h3 {
+  font-size: clamp(22px, 3.5vw, 28px);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.hero-copy p {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-note {
+  margin-top: 30px;
+  color: #666;
+  font-size: clamp(14px, 1.2vw, 16px);
+}
+
+.hero-image {
+  margin-top: 40px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* ===================================
+   波線セクション
+=================================== */
+
+.wave-section {
+  position: relative;
+  padding: 100px 0 10px;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 波の色（薄い生成りグリーン） */
+.wave-light {
+  background: #eef5f2;
+}
+
+.wave-plain {
+  background: #f4eee0;
+}
+
+/* 上部の波 */
+.wave-top {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+}
+
+.wave-top svg {
+  display: block;
+  width: 100%;
+  height: 140px;
+}
+
+.wave-light .wave-top path {
+  fill: #f4eee0;
+}
+
+.wave-plain .wave-top path {
+  fill: #eef5f2;
+}
+
+/* スマホ調整 */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 90px;
+    padding-bottom: 70px;
+  }
+
+  .hero-copy h3 {
+    font-size: clamp(20px, 5vw, 24px);
+  }
+
+  .hero-image img {
+    border-radius: 14px;
+  }
+}
+
+/* ===== セクションデザイン ===== */
+
+section {
+  background: transparent;
+  margin-bottom: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* ===== 見出し ===== */
+
+section h2 {
+  margin-bottom: 32px;
+  font-weight: 500;
+  position: relative;
+  font-size: clamp(20px, 3vw, 26px);
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  background: #6fa89d;
+  margin-top: 12px;
+  border-radius: 3px;
+}
+
+/* ===== サブ見出し ===== */
+
+h3 {
+  margin-top: 50px;
+  margin-bottom: 22px;
+  font-weight: 500;
+  color: #444;
+  font-size: clamp(18px, 2.5vw, 20px);
+}
+
+/* ===== テキスト ===== */
+
+p {
+  margin: 0 0 20px 0;
+  font-size: clamp(16px, 1.3vw, 18px);
+}
+
+/* ===== 箇条書き ===== */
+
+ul {
+  margin-top: 24px;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 14px;
+  font-size: clamp(16px, 1.3vw, 18px);
+}
+
+/* ===== フッター ===== */
+
+footer {
+  background: transparent;
+  border-top: 1px solid #e0ddd7;
+  padding: 60px 20px 50px 20px;
+  margin-top: 60px;
+}
+
+footer h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #555;
+  font-size: clamp(16px, 2vw, 18px);
+}
+
+footer p {
+  margin-bottom: 8px;
+  color: #666;
+  font-size: clamp(14px, 1.2vw, 15px);
+}
+
+/* ===== レスポンシブ微調整 ===== */
+
+@media (max-width: 768px) {
+  header,
+  section,
+  footer {
+    padding: 60px 18px;
+  }
+
+  header {
+    padding-top: 80px;
+  }
+
+  section {
+    border-radius: 14px;
+  }
+}
