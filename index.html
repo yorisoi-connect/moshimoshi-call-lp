@@ -148,7 +148,7 @@
       white-space: nowrap;
     }
     .header-nav-link:hover { background: rgba(74,124,111,.08); color: var(--primary); }
-    . { display: flex; align-items: center; gap: 10px; }
+    .header-right { display: flex; align-items: center; gap: 10px; }
     .header-menu-btn {
       display: none;
       background: none;
@@ -158,7 +158,6 @@
       color: var(--text);
     }
     @media (max-width: 768px) {
-      . { grid-column: 3; }
       .header-nav {
         display: none;
         flex-direction: column;
@@ -174,8 +173,10 @@
       }
       .header-nav.open { display: flex; }
       .header-nav-link { padding: 10px 12px; width: 100%; border-radius: 8px; }
+      .header-inner { grid-template-columns: auto 1fr auto; }
+      .header-right { grid-column: 3; }
       .header-menu-btn { display: flex; }
-      . .btn { display: none; }
+      .header-right .btn { display: none; }
     }
 
     /* ── Hero ── */
@@ -654,7 +655,7 @@
       </div>
       <div class="service-card">
         <div class="service-card-icon">📋</div>
-        <h3>ご家族へ会話レポートをお送りします</h3>
+        <h3>ご家族へ会話レポートをお送り</h3>
         <p>会話の内容や生活の様子をメールにてご報告します。離れて暮らすご家族も、親御さまの日常を把握できます。</p>
       </div>
       <div class="service-card">
@@ -716,7 +717,7 @@
             <span class="monitor-check">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-6" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
-            週1回 約15分の定期通話
+            週2回 約15分の定期通話
           </li>
           <li>
             <span class="monitor-check">
