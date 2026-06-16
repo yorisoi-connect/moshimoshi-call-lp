@@ -102,6 +102,10 @@
     .btn-outline-white { background: transparent; color: #fff; border-color: #fff; }
     .btn-outline-white:hover { background: #fff; color: var(--primary); transform: translateY(-2px); }
 
+    @media (min-width: 769px) {
+      .header-nav-contact { display: none !important; }
+    }
+    
     /* ── Header ── */
     .header {
       position: fixed;
@@ -569,7 +573,7 @@
         <a href="#about"   class="header-nav-link">サービス内容</a>
         <a href="#worries" class="header-nav-link">こんなお悩みに</a>
         <a href="#monitor" class="header-nav-link">モニター募集</a>
-        <a href="#contact" class="header-nav-link">お問い合わせ</a>
+        <a href="#contact" class="header-nav-link header-nav-contact">お問い合わせ</a>
       </nav>
       <div class="header-right">
         <button class="header-menu-btn" id="menuBtn" aria-label="メニューを開く" aria-expanded="false" aria-controls="headerNav">
